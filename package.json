@@ -1,0 +1,28 @@
+{
+  "name": "sync-blob",
+  "version": "0.0.1",
+  "description": "Synchronous method for converting Blob objects to ArrayBuffer or base64",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cnwhy/syncBlob.git"
+  },
+  "keywords": [
+    "blob",
+    "sync",
+    "ArrayBuffer",
+    "base64"
+  ],
+  "author": "cnwhy@163.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cnwhy/syncBlob/issues"
+  },
+  "homepage": "https://github.com/cnwhy/syncBlob#readme",
+  "devDependencies": {
+    "gulp": "^5.0.1"
+  }
+}
