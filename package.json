@@ -2,10 +2,21 @@
   "name": "sync-blob",
   "version": "0.0.1",
   "description": "Synchronous method for converting Blob objects to ArrayBuffer or base64",
-  "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm run build:type && npm run build:core",
+    "build:type": "tsc --declaration --emitDeclarationOnly --outDir ./types",
+    "build:core": "vite build",
+    "prebuild": "rimraf ./lib ./types",
+    "test": "vite ./test/bdd --port 3330 --open"
   },
+  "main": "lib/sync-blob.cjs.js",
+  "browser": "lib/sync-blob.umd.js",
+  "module": "lib/sync-blob.es.js",
+  "types": "types/index.d.ts",
+  "files": [
+    "lib",
+    "types"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cnwhy/syncBlob.git"
@@ -23,6 +34,15 @@
   },
   "homepage": "https://github.com/cnwhy/syncBlob#readme",
   "devDependencies": {
-    "gulp": "^5.0.1"
+    "@cnwhy/base64": "^0.2.4",
+    "@types/chai": "^5.2.2",
+    "@types/mocha": "^10.0.10",
+    "chai": "^5.2.0",
+    "mocha": "^11.7.0",
+    "rimraf": "^6.0.1",
+    "rollup": "^4.44.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5"
   }
 }
