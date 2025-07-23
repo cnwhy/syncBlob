@@ -1,6 +1,6 @@
 # sync-blob
 
-利用 `XHR` 同方模式获取`blob`的内容，适合不能用异步方法的地方，比如`getter`,`setter`;
+利用 `XHR` 同步模式获取`blob`的内容，适合不能用异步方法的地方，比如`getter`,`setter`;
 
 ## 兼容性
 
